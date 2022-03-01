@@ -17,9 +17,9 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 5.0.x
-    - name: Restore dependencies
-      run: dotnet restore .\CprScannerService\CprScannerRestApi\
+    - name: Restore dependencies sln
+      run: dotnet restore ./CprScannerService/CprScannerRestApi/CprScannerRestApi.sln
     - name: Build
-      run: dotnet build --no-restore .\CprScannerService\CprScannerRestApi\
+      run: dotnet build --no-restore ./CprScannerService/CprScannerRestApi/CprScannerRestApi.sln
     - name: Test
-      run: dotnet test --no-build --verbosity normal .\CprScannerService\CprScannerRestApi\
+      run: dotnet test --no-build --verbosity normal ./CprScannerService/CprScannerRestApi/CprScannerRestApi.sln
