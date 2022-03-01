@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup Label="Globals">
+		<RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+		<SccProjectName>SAK</SccProjectName>
+		<SccProvider>SAK</SccProvider>
+		<SccAuxPath>SAK</SccAuxPath>
+		<SccLocalPath>SAK</SccLocalPath>
+		<Platforms>AnyCPU;x64</Platforms>
+		<RuntimeIdentifier>win-x64</RuntimeIdentifier>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+		<Description>Scanner fil for cpr numre og returnerer dem.</Description>
+		<Copyright>Forca A/S</Copyright>
+		<PackageTags>CprScanner</PackageTags>
+		<PackageReleaseNotes>Udkast</PackageReleaseNotes>
+		<SignAssembly>true</SignAssembly>
+		<AssemblyOriginatorKeyFile>CprScanner.snk</AssemblyOriginatorKeyFile>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="NSubstitute" Version="4.2.2" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\CprScanner.Business\CprScanner.Business.csproj" />
+		<ProjectReference Include="..\CprScanner.FileHandlers.Aspose\CprScanner.FileHandlers.Aspose.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="Aspose.Total.lic">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+
+</Project>
